@@ -31,6 +31,13 @@ header {
   }
 }
 
+#worldclock, #stopwatch, #timer {
+  display: none;
+}
+#worldclock.show, #stopwatch.show, #timer.show {
+  display: block;
+}
+
 footer {
   z-index: 2;
   position: fixed;
@@ -236,7 +243,7 @@ div.timer-content {
   overflow: hidden;
 
   div.inputs {
-    postion: relative;
+    position: relative;
     height: 160px;
     border-bottom: 1px solid @borderColor;
     input {
@@ -250,6 +257,28 @@ div.timer-content {
       text-align: center;
     }
   }
+  .counter {
+    position: relative;
+    height: 160px;
+    border-bottom: 1px solid #ccc;
+    background: white;
+    .timerclock {
+      font-family: "HelveticaNeue-UltraLight", Arial;
+      font-size: 70px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 45px;
+      text-align: center;
+
+      span {
+        font-family: "HelveticaNeue-UltraLight";
+        text-align: center;
+      }
+    }
+  }
+
+
 }
 
 

@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>
-        Clock
-    </title>
+
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Clock</title>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <meta content="width=device-width, initial-scale=1.0, user-scalable=no">
+
 </head>
 <body>
 
 
-<div id="stopwatch">
+<div id="stopwatch" class="page">
     <header>
         <h1>Stopwatch</h1>
     </header>
@@ -30,7 +34,7 @@
     </div>
 </div>
 
-<div id="worldclock">
+<div id="worldclock" class="page show">
     <header>
         <h1>World Clock</h1>
     </header>
@@ -38,17 +42,21 @@
 </div>
 
 
-<div id="timer">
+<div id="timer" class="page ">
     <header>
         <h1>Timer</h1>
     </header>
     <div class="timer-content">
         <div class="counter" style="display: none;">
-            <p class="total-time">00:00.00</p>
+            <div class="timerclock">
+                <span id="hour"></span><span id="colon">:</span>
+                <span id="minutes"></span>:
+                <span id="second"></span>
+            </div>
         </div>
         <div class="inputs">
             <input class="hours" type="number" name="hours" max="100" min="0" value="0"/>
-            <input class="minutes" type="number" name="minutes" max="59" min="0" value="0"/>
+            <input class="minutes" type="number" name="minutes" max="59" min="0" value="1"/>
         </div>
         <div class="buttons">
             <button class="button-start left-button">Start</button>
